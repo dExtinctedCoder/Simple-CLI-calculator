@@ -1,50 +1,59 @@
-alert("**********WELCOME TO THE CALCULATOR**********");
-alert("This app performs basic arithmetic calculations:\n Addition, Substraction, Multiplication, Divivsion")
 
+alert("************ WELCOME TO THE CALCULATOR ************\n This Calculator can perform basic arithmetic operations: \n Addition(+), Substraction(-), Multiplication(*), Division(/), Modulus(%)");
 
-
-calcFunx = ()=> {
-
-  userFirstInput = prompt("Enter First Number: ")
-  userSecondInput = prompt("Enter Second Number: ")
-  userOperandInput = prompt("Enter Operand: ")
+calc = () => {
   
-  if (userOperandInput == '+') {
+  const userFirstInput = parseInt(prompt("Enter First Number:"));
+  const userSecondInput = parseInt(prompt("Enter Second Number:"));
+  const userOperand = prompt("Enter operand:");
+  
+  if (userOperand == "+") {
     result = userFirstInput + userSecondInput;
-    alert(String(userFirstInput) + ' + ' + String(userSecondInput) + ' = ' + String(result));
+    alert(String(userFirstInput) + " + " + String(userSecondInput) + " = " + String(result));
   }
-
-  else if (userOperandInput == '-') {
-    result = userFirstInput - userSecondInput
-    alert(String(userFirstInput) + ' - ' + String(userSecondInput) + ' = ' + String(result));
+  
+  else if (userOperand == "-") {
+    result = userFirstInput - userSecondInput;
+    alert(String(userFirstInput) + " - " + String(userSecondInput) + " = " + String(result));
   }
-
-  else if (userOperandInput == '*') {
+  
+  else if (userOperand == "*") {
     result = userFirstInput * userSecondInput
-    alert(String(userFirstInput) + ' *' + String(userSecondInput) + ' = ' + String(result));
+    alert(String(userFirstInput) + " * " + String(userSecondInput) + " = " + String(result));
   }
-
-  else if (userOperandInput == '/') {
+  
+  else if (userOperand == "/") {
     result = userFirstInput / userSecondInput
-    alert(String(userFirstInput) + ' / ' + String(userSecondInput) + ' = ' + String(result));
+    alert(String(userFirstInput) + " / " + String(userSecondInput) + " = " + String(result));
   }
-
-  else if (userOperandInput == '%') {
+  
+  else if (userOperand == "%") {
     result = userFirstInput % userSecondInput
-    alert(String(userFirstInput) + ' % ' + String(userSecondInput) + ' = ' + String(result));
+    alert(String(userFirstInput) + " % " + String(userSecondInput) + " = " + String(result));
   }
-
-  retry = prompt("Do you wish to perform another calculation?\n Y(yes) N(no)");
-
-  if (retry == 'y' || retry == 'Y' ) {
-    calcFunx();
+  
+  else {
+    alert("Invalid Operand input\nPlease try again.")
+    calc();
   }
-
-  else if (retry == 'n' || retry == 'N' ) {
-    alert("Thanks for your time! See you again");
+  
+  retry = prompt("Do you want to perform another calculation?\n Y:(yes) N:(no)");
+  
+  if (retry == "y" || retry == "Y") {
+    calc();
+  }
+  
+  else if (retry == "n" || retry == "N") {
+    alert("Thanks for your time! See you again.")
+  }
+  
+  else {
+    alert("Invalid Input");
   }
 }
 
-calcFunx();
+calc();
+
+
 
 
