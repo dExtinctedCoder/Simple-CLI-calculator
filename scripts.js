@@ -3,8 +3,8 @@ alert("************ WELCOME TO THE CALCULATOR ************\n This Calculator can
 
 calc = () => {
   
-  const userFirstInput = parseInt(prompt("Enter First Number:"));
-  const userSecondInput = parseInt(prompt("Enter Second Number:"));
+  const userFirstInput = Number(prompt("Enter First Number:"));
+  const userSecondInput = Number(prompt("Enter Second Number:"));
   const userOperand = prompt("Enter operand:");
   
   if (userOperand == "+") {
